@@ -26,7 +26,7 @@
         <activity android:name=".EventPageActivity"></activity>
         <activity android:name=".FriendsPageActivity"></activity>
         <activity android:name=".GroupsPageActivity"></activity>
-        
+         
     </application>
 
 </manifest>
