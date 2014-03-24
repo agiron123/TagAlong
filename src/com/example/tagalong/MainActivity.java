@@ -1,5 +1,7 @@
 package com.example.tagalong;
 
+import java.util.ArrayList;
+
 import android.app.Activity;
 import android.os.Bundle;
 import android.util.Log;
@@ -7,8 +9,9 @@ import android.view.Menu;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.View.OnTouchListener;
-import android.widget.Button;
+import android.widget.ArrayAdapter;
 import android.widget.ImageButton;
+import android.widget.Toast;
 
 public class MainActivity extends Activity {
 
@@ -19,16 +22,14 @@ public class MainActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         
-        map_button =(ImageButton) findViewById(R.id.imageButton1); 
+        map_button =(ImageButton) findViewById(R.id.imageButton1);
+        addImageButtonListener();
     }
-
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.main, menu);
-        
-        
         return true;
     }
     
@@ -39,11 +40,13 @@ public class MainActivity extends Activity {
 			@Override
 			public boolean onTouch(View v, MotionEvent event) {
 				// TODO Auto-generated method stub
+				//TODO Make this transsfer to the map view.
 				Log.d("mainactivity", "Touched the map button");
-				return false;
+				Toast.makeText(getApplicationContext(), "Pressed Map Button!", Toast.LENGTH_LONG).show();
+				return true;
 			}
  
 		});
     	
     }
-    }
+}
