@@ -3,6 +3,7 @@ package com.example.tagalong;
 import java.util.ArrayList;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.Menu;
@@ -43,6 +44,9 @@ public class MainActivity extends Activity {
 				//TODO Make this transsfer to the map view.
 				Log.d("mainactivity", "Touched the map button");
 				Toast.makeText(getApplicationContext(), "Pressed Map Button!", Toast.LENGTH_LONG).show();
+				
+				Intent i = new Intent(getApplicationContext(), MapsPageActivity.class);
+				startActivity(i);
 				return true;
 			}
  
