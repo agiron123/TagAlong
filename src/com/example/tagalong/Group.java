@@ -7,9 +7,11 @@ public class Group {
 	private List<Integer> members;
 	private List<Message> chatLog;
 	private List<SuggestedEvent> suggestedEvents;
+	private String title;
 	
-	public Group(List<Integer> members, List<Message> chatLog, List<SuggestedEvent> suggestedEvents)
+	public Group(String title, List<Integer> members, List<Message> chatLog, List<SuggestedEvent> suggestedEvents)
 	{
+		this.title = title;
 		this.members = members;
 		this.chatLog = chatLog;
 		this.suggestedEvents = suggestedEvents;
@@ -39,4 +41,12 @@ public class Group {
 		this.suggestedEvents = suggestedEvents;
 	}
 
+	public String getTitle() {
+		return title;
+	}
+	
+	public void setTitle(String title) {
+		this.title = title;
+	}
+	
 }
