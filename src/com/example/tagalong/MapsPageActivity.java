@@ -42,9 +42,10 @@ public class MapsPageActivity extends FragmentActivity implements  LocationListe
 	        map.setMyLocationEnabled(true);
 	        map.setMapType(GoogleMap.MAP_TYPE_NORMAL); 
 	        //Have to change coordinates below for gatech
-	        LatLngBounds gaTech = new LatLngBounds(new LatLng(33.75, -84.39), new LatLng(33.75, -84.39));
-	        map.moveCamera(CameraUpdateFactory.newLatLngZoom(gaTech.getCenter(), 11));
-	        map.addMarker(new MarkerOptions().position(new LatLng(33.47, -84.401)).title("Movie Screening").snippet("03/28/2014 8:00 PM"));
+	        LatLngBounds gaTech = new LatLngBounds(new LatLng(33.78, -84.394), new LatLng(33.78, -84.394));
+	        map.moveCamera(CameraUpdateFactory.newLatLngZoom(gaTech.getCenter(), 14));
+	        
+	        map.addMarker(new MarkerOptions().position(new LatLng(33.778, -84.401)).title("Movie Screening").snippet("03/28/2014 8:00 PM"));
 	        map.addMarker(new MarkerOptions().position(new LatLng(33.779, -84.394)).title("All you can eat Ribs!").snippet("03/27/2014 6:00 PM"));
 	        map.addMarker(new MarkerOptions().position(new LatLng(33.777, -84.388)).title("Concert").snippet("03/29/2014 8:00 PM"));
 	        map.addMarker(new MarkerOptions().position(new LatLng(33.771816, -84.404)).title("Drinking at the Bar").snippet("03/29/2014 10:00 PM"));
