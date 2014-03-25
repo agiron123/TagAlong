@@ -15,22 +15,33 @@
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:src="@drawable/map_button" />
-	
+    <ScrollView
+        android:id="@+id/scrollView1"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@id/imageButton1">
+
+	<RelativeLayout
+	    	android:id="@+id/relativeLayout1"
+	        android:layout_width="fill_parent"
+	        android:layout_height="fill_parent"
+	        android:layout_below="@id/scrollView1" >
+        
 	<TextView
 	        android:id="@+id/textView1"
 	        android:layout_width="wrap_content"
 	        android:layout_height="wrap_content"
-	        android:layout_below="@+id/imageButton1"
 	        android:layout_centerHorizontal="true"
 	        android:layout_marginTop="18dp"
 	        android:text="Events"
+	        android:padding="5dp"
 	        android:textAppearance="?android:attr/textAppearanceMedium" />
 
     <HorizontalScrollView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="125dp"
-        android:id="@+id/hor_scrollView1"        
+        android:id="@+id/hor_scrollView1"
+        android:layout_below="@+id/textView1">
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -52,13 +63,15 @@
         android:layout_centerHorizontal="true"
         android:layout_centerVertical="true"
         android:text="Watch List"
+        android:layout_below="@+id/hor_scrollView1"
+        android:padding="5dp"
         android:textAppearance="?android:attr/textAppearanceMedium" />
 
     <HorizontalScrollView
-        android:id="@+id/horizontalScrollView1"
+        android:id="@+id/hor_scrollView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="225dp" >
+        android:layout_below="@+id/textView2">
 
         <LinearLayout
             android:layout_width="wrap_content"
@@ -73,10 +86,21 @@
         </LinearLayout>
     </HorizontalScrollView>
 
-    <HorizontalScrollView
+     <TextView
+        android:id="@+id/textView3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="325dp" >
+        android:layout_alignRight="@+id/textView2"
+        android:text="Groups"
+        android:padding="5dp"
+        android:layout_below="@+id/hor_scrollView2"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <HorizontalScrollView
+        android:id="@+id/horizontalScrollView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView3">
 
         <LinearLayout
             android:layout_width="wrap_content"
@@ -90,16 +114,8 @@
 			<include layout="@layout/event_carousel_item"/>
         </LinearLayout>
     </HorizontalScrollView>
-
-    <TextView
-        android:id="@+id/textView3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignRight="@+id/textView2"
-        android:layout_below="@+id/horizontalScrollView1"
-        android:layout_marginTop="14dp"
-        android:text="Groups"
-        android:textAppearance="?android:attr/textAppearanceMedium" />
-    
-
+    </RelativeLayout>
+	</ScrollView>
+	
+   
 </RelativeLayout>
