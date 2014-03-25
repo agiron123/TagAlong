@@ -1,21 +1,30 @@
 package com.example.tagalong;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
+import android.widget.ImageView;
+import android.widget.TextView;
 
 public class GroupsPageActivity extends Activity
 {
-	  //Button myButton;
-	
-	   //onCreate is where the page is first created. Initialize things like buttons here.
+	 
+		private String groupName;
 	   @Override
 	    protected void onCreate(Bundle savedInstanceState) {
 	        super.onCreate(savedInstanceState);
 	        setContentView(R.layout.groups_page_layout);
 	        
-	        //Example of how you initialize a button. Remember to add onClick listener later.
-	        //myButton =(Button) findViewById(R.id.button1); 
+	        Intent intent = getIntent();
+			groupName = intent.getExtras().getString("groupName");
+			
+			TextView textView = (TextView) findViewById(R.id.groupnametext);
+			textView.setText(groupName);
+	        
+			ImageView chatLogImageView = (ImageView) findViewById(R.id.chatlogimage);
+			chatLogImageView.setImageResource(R.drawable.chatlog);
+			
 	    }
 
 
