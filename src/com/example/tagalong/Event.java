@@ -6,7 +6,7 @@ import android.graphics.Bitmap;
 
 public class Event {
 	
-	private enum Categories{EAT, DRINK, PLAY, SPORT, CHILL, NETWORKING};
+	//private enum Categories{EAT, DRINK, PLAY, SPORT, CHILL, NETWORKING};
 	
 	private String title;
 	private String startDateTime; //TODO: change these to datetimes after the prototype is done
@@ -15,12 +15,12 @@ public class Event {
 	private boolean private_event; //boolean for whether event is public or private
 	private double cost;
 	private String description;
-	private Categories category;
 	private List<Integer> attendees; //for now, we will make the userID just an int
 	private Bitmap picture;
+	private String category;
 	
 	public Event(String title, String startDateTime, String endDateTime, int capacity, 
-			boolean private_event, double cost, String description, Categories category, 
+			boolean private_event, double cost, String description, String category, 
 			List<Integer> attendees, Bitmap picture)
 	{
 		this.title = title;
@@ -33,6 +33,22 @@ public class Event {
 		this.category = category;
 		this.attendees = attendees;
 		this.picture = picture;
+	}
+
+	public Event(String title, String startDateTime, String endDateTime, int capacity, 
+			boolean private_event, double cost, String description, String category, 
+			List<Integer> attendees)
+	{
+		this.title = title;
+		this.startDateTime = startDateTime;
+		this.endDateTime = endDateTime;
+		this.capacity = capacity;
+		this.private_event = private_event;
+		this.cost = cost;
+		this.description = description;
+		this.category = category;
+		this.attendees = attendees;
+		this.picture = null;
 	}
 		
 	public List<Integer> getAttendees() {
@@ -51,11 +67,11 @@ public class Event {
 		this.capacity = capacity;
 	}
 	
-	public Categories getCategory() {
+	public String getCategory() {
 		return category;
 	}
 	
-	public void setCategory(Categories category) {
+	public void setCategory(String category) {
 		this.category = category;
 	}
 	
