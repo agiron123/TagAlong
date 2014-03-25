@@ -35,6 +35,7 @@ public class User {
 		this.state = state;
 		this.watchList = null;
 		this.hosted = null;
+		this.bio= "No Bio";
 	}
 
 
