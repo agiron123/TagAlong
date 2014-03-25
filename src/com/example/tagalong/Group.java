@@ -6,10 +6,10 @@ public class Group {
 	
 	private List<Integer> members;
 	private List<Message> chatLog;
-	private List<SuggestedEvent> suggestedEvents;
+	private List<Event> suggestedEvents;
 	private String title;
 	
-	public Group(String title, List<Integer> members, List<Message> chatLog, List<SuggestedEvent> suggestedEvents)
+	public Group(String title, List<Integer> members, List<Message> chatLog, List<Event> suggestedEvents)
 	{
 		this.title = title;
 		this.members = members;
@@ -33,11 +33,11 @@ public class Group {
 		this.members = members;
 	}
 	
-	public List<SuggestedEvent> getSuggestedEvents() {
+	public List<Event> getSuggestedEvents() {
 		return suggestedEvents;
 	}
 	
-	public void setSuggestedEvents(List<SuggestedEvent> suggestedEvents) {
+	public void setSuggestedEvents(List<Event> suggestedEvents) {
 		this.suggestedEvents = suggestedEvents;
 	}
 
