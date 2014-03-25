@@ -19,14 +19,26 @@ public class User {
 	
 	private int user_id;
 	private List<Integer> friends; //user_id is going to be represented by an integer
-	private char[] bio;
+	private String bio;
 	private Bitmap picture;
 	private String city;
 	private String state;
 	private List<SuggestedEvent> watchList;
 	private Event hosted;
 	
-	public User(int user_id, List<Integer> friends, char[] bio, Bitmap picture, String city, String state, List<SuggestedEvent> watchList, Event hosted)
+
+	public User(int user_id, String city, String state){
+		this.user_id = user_id;
+		this.friends = null;
+		this.picture = null;
+		this.city = city;
+		this.state = state;
+		this.watchList = null;
+		this.hosted = null;
+	}
+
+
+	public User(int user_id, List<Integer> friends, String bio, Bitmap picture, String city, String state, List<SuggestedEvent> watchList, Event hosted)
 	{
 		this.user_id = user_id;
 		this.friends = friends;
@@ -35,13 +47,14 @@ public class User {
 		this.state = state;
 		this.watchList = watchList;
 		this.hosted = hosted;
+		this.bio = bio;
 	}
 
-	public char[] getBio() {
+	public String getBio() {
 		return bio;
 	}
 	
-	public void setBio(char[] bio) {
+	public void setBio(String bio) {
 		this.bio = bio;
 	}
 	
