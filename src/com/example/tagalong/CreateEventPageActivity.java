@@ -1,31 +1,42 @@
 package com.example.tagalong;
 
-import android.app.Activity;
+import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
+import android.view.MenuItem;
+import android.widget.TextView;
+import android.graphics.Paint;
 
-public class CreateEventPageActivity extends Activity 
-{
-
-	  //Button myButton;
-	
-	   //onCreate is where the page is first created. Initialize things like buttons here.
-	   @Override
-	    protected void onCreate(Bundle savedInstanceState) {
-	        super.onCreate(savedInstanceState);
-	        setContentView(R.layout.activity_main);
-	        
-	        //Example of how you initialize a button. Remember to add onClick listener later.
-	        //myButton =(Button) findViewById(R.id.button1); 
-	    }
-
-
-	    @Override
-	    public boolean onCreateOptionsMenu(Menu menu) {
-	        // Inflate the menu; this adds items to the action bar if it is present.
-	        getMenuInflater().inflate(R.menu.main, menu);
-	        
-	        
-	        return true;
-	    }
+public class CreateEventPageActivity extends ActionBarActivity {
+    
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_create_event);
+        
+        TextView tv = (TextView) findViewById(R.id.textView7);
+        tv.setPaintFlags(tv.getPaintFlags() | Paint.UNDERLINE_TEXT_FLAG);
+    }
+    
+    
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        
+        // Inflate the menu; this adds items to the action bar if it is present.
+        getMenuInflater().inflate(R.menu.create_event, menu);
+        return true;
+    }
+    
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        // Handle action bar item clicks here. The action bar will
+        // automatically handle clicks on the Home/Up button, so long
+        // as you specify a parent activity in AndroidManifest.xml.
+        int id = item.getItemId();
+        if (id == R.id.action_settings) {
+            return true;
+        }
+        return super.onOptionsItemSelected(item);
+    }
+    
 }
