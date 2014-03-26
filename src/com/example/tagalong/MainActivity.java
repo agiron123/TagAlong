@@ -13,17 +13,27 @@ import android.view.View;
 import android.view.View.OnTouchListener;
 import android.widget.ArrayAdapter;
 import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.Toast;
 
 public class MainActivity extends ListActivity {
 
 	ImageButton map_button;
+	ImageView groupsView;
+	ImageView watchListView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        
+        //fake buttons to click!
+        groupsView = (ImageView) findViewById(R.id.groupsListImage);
+        groupsView.setImageResource(R.drawable.groupinfopic);
+        
+        watchListView = (ImageView) findViewById(R.id.watchListImage);
+        watchListView.setImageResource(R.drawable.frozon);
         
         map_button =(ImageButton) findViewById(R.id.imageButton1);
         addImageButtonListener();
@@ -54,8 +64,6 @@ public class MainActivity extends ListActivity {
 
 			@Override
 			public boolean onTouch(View v, MotionEvent event) {
-				// TODO Auto-generated method stub
-				//TODO Make this transsfer to the map view.
 				Log.d("mainactivity", "Touched the map button");
 				Toast.makeText(getApplicationContext(), "Pressed Map Button!", Toast.LENGTH_LONG).show();
 				
@@ -66,14 +74,35 @@ public class MainActivity extends ListActivity {
  
 		});
     	
+    	watchListView.setOnClickListener(new View.OnClickListener() {
+
+      	  @Override
+      	  public void onClick(View view) {
+      	    // do stuff
+      	      Intent i = new Intent(getApplicationContext(), EventPageActivity.class);
+      	      startActivity(i);
+      	  }
+
+      	});
+      
+      groupsView.setOnClickListener(new View.OnClickListener() {
+
+      	  @Override
+      	  public void onClick(View view) {
+      	      Intent i = new Intent(getApplicationContext(), GroupsPageActivity.class);
+      	      startActivity(i);
+      	    // do stuff
+      	  }
+
+      	});
+    	
     }
     
     @Override
     public void onListItemClick(ListView l, View v, int position, long id) {
       // do something with the data
       Toast.makeText(getApplicationContext(), "ClickedEvent", Toast.LENGTH_LONG).show();
-      Intent i = new Intent(getApplicationContext(), FriendsPageActivity.class);
+      Intent i = new Intent(getApplicationContext(), EventPageActivity.class);
       startActivity(i);
-    }
-    
+    }   
 }

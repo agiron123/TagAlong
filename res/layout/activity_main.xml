@@ -85,8 +85,35 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="horizontal" >
+			
+            <TextView
+            android:id="@+id/eventNameTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:text="EventName"
+            android:layout_gravity="center" 
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+        
+        <TextView
+            android:id="@+id/eventDateTimeTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:text="Event Date/Time"
+            android:layout_gravity="center" 
+            android:textAppearance="?android:attr/textAppearanceMedium" />
 
-     		<include layout="@layout/event_carousel_item"/>
+        <ImageView
+            android:id="@+id/watchListImage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/placeholder"
+            android:layout_gravity="center"
+            android:layout_below="@+id/eventDateTimeTextView"  />
+
             <include layout="@layout/event_carousel_item"/>
 			<include layout="@layout/event_carousel_item"/>
 			<include layout="@layout/event_carousel_item"/>
@@ -114,8 +141,34 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="horizontal" >
+			
+                        <TextView
+            android:id="@+id/eventNameTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:text="EventName"
+            android:layout_gravity="center" 
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+        
+        <TextView
+            android:id="@+id/eventDateTimeTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:text="Event Date/Time"
+            android:layout_gravity="center" 
+            android:textAppearance="?android:attr/textAppearanceMedium" />
 
-            <include layout="@layout/event_carousel_item"/>
+        <ImageView
+            android:id="@+id/groupsListImage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/placeholder"
+            android:layout_gravity="center"  />
+
             <include layout="@layout/event_carousel_item"/>
 			<include layout="@layout/event_carousel_item"/>
 			<include layout="@layout/event_carousel_item"/>
