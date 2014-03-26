@@ -27,6 +27,14 @@ public class MainActivity extends ListActivity {
         map_button =(ImageButton) findViewById(R.id.imageButton1);
         addImageButtonListener();
         
+        //Load the test data
+        //TestData myTestData = new TestData();
+        
+        MockData myMockData = new MockData();
+        
+        MyEventArrayAdapter eventAdapter = new MyEventArrayAdapter(this,myMockData.getEvents());
+        setListAdapter(eventAdapter);
+        
         //TODO: add array adapter here for the Events list, Watch list and Group list
         //going to need to have an array of dummy data ready to access here.
 
