@@ -2,7 +2,8 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical" >
+    android:orientation="vertical" 
+    android:background="@drawable/calistrip_bkgd" >
 
     <TextView
         android:id="@+id/groupnametext"
@@ -10,12 +11,149 @@
         android:layout_height="wrap_content"
         android:gravity="center_horizontal"
         android:textSize = "30dp"
-        android:text="TextView" />
+        android:text="Groups" />
+    
+    <HorizontalScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/hor_scrollView1"
+        android:layout_marginTop="5dp"
+        android:layout_below="@+id/groupnametext"
+        android:layout_alignParentEnd="true">
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+            
+            <LinearLayout 
+    			android:layout_width="match_parent"
+    			android:layout_height="match_parent"
+    			android:orientation="vertical"
+    			android:padding="5dp">   
+        		<TextView
+            		android:id="@+id/groupNameTextView"
+            		android:layout_width="wrap_content"
+            		android:layout_height="wrap_content"
+            		android:layout_centerHorizontal="true"
+            		android:layout_centerVertical="true"
+            		android:text="Group Name"
+            		android:layout_gravity="center" 
+            		android:textAppearance="?android:attr/textAppearanceMedium" />       
+        		<ImageView
+            		android:id="@+id/placeholderImage1"
+            		android:layout_width="wrap_content"
+            		android:layout_height="wrap_content"
+            		android:src="@drawable/groupinfopic"
+            		android:layout_gravity="center"  />
+			</LinearLayout>
+			
+            <LinearLayout 
+    			android:layout_width="match_parent"
+    			android:layout_height="match_parent"
+    			android:orientation="vertical"
+    			android:padding="5dp">   
+        		<TextView
+            		android:id="@+id/groupNameTextView"
+            		android:layout_width="wrap_content"
+            		android:layout_height="wrap_content"
+            		android:layout_centerHorizontal="true"
+            		android:layout_centerVertical="true"
+            		android:text="Group Name"
+            		android:layout_gravity="center" 
+            		android:textAppearance="?android:attr/textAppearanceMedium" />       
+        		<ImageView
+            		android:id="@+id/placeholderImage2"
+            		android:layout_width="wrap_content"
+            		android:layout_height="wrap_content"
+            		android:src="@drawable/groupinfopictwo"
+            		android:layout_gravity="center"  />
+			</LinearLayout>
+			
+            <LinearLayout 
+    			android:layout_width="match_parent"
+    			android:layout_height="match_parent"
+    			android:orientation="vertical"
+    			android:padding="5dp">   
+        		<TextView
+            		android:id="@+id/groupNameTextView"
+            		android:layout_width="wrap_content"
+            		android:layout_height="wrap_content"
+            		android:layout_centerHorizontal="true"
+            		android:layout_centerVertical="true"
+            		android:text="Group Name"
+            		android:layout_gravity="center" 
+            		android:textAppearance="?android:attr/textAppearanceMedium" />       
+        		<ImageView
+            		android:id="@+id/placeholderImage3"
+            		android:layout_width="wrap_content"
+            		android:layout_height="wrap_content"
+            		android:src="@drawable/groupinfopic"
+            		android:layout_gravity="center"  />
+			</LinearLayout>
+			
+            <LinearLayout 
+    			android:layout_width="match_parent"
+    			android:layout_height="match_parent"
+    			android:orientation="vertical"
+    			android:padding="5dp">   
+        		<TextView
+            		android:id="@+id/groupNameTextView"
+            		android:layout_width="wrap_content"
+            		android:layout_height="wrap_content"
+            		android:layout_centerHorizontal="true"
+            		android:layout_centerVertical="true"
+            		android:text="Group Name"
+            		android:layout_gravity="center" 
+            		android:textAppearance="?android:attr/textAppearanceMedium" />       
+        		<ImageView
+            		android:id="@+id/placeholderImage4"
+            		android:layout_width="wrap_content"
+            		android:layout_height="wrap_content"
+            		android:src="@drawable/groupinfopictwo"
+            		android:layout_gravity="center"  />
+			</LinearLayout>
+			
+            <LinearLayout 
+    			android:layout_width="match_parent"
+    			android:layout_height="match_parent"
+    			android:orientation="vertical"
+    			android:padding="5dp">   
+        		<TextView
+            		android:id="@+id/groupNameTextView"
+            		android:layout_width="wrap_content"
+            		android:layout_height="wrap_content"
+            		android:layout_centerHorizontal="true"
+            		android:layout_centerVertical="true"
+            		android:text="Group Name"
+            		android:layout_gravity="center" 
+            		android:textAppearance="?android:attr/textAppearanceMedium" />       
+        		<ImageView
+            		android:id="@+id/placeholderImage5"
+            		android:layout_width="wrap_content"
+            		android:layout_height="wrap_content"
+            		android:src="@drawable/groupinfopic"
+            		android:layout_gravity="center"  />
+			</LinearLayout>
+            
+        </LinearLayout>
+    </HorizontalScrollView>
 
     <ImageView
         android:id="@+id/chatlogimage"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:src="@drawable/chatlog" />
+
+    <EditText
+        android:id="@+id/editText1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint = "Type message here" 
+        android:inputType="textMultiLine" >
+        
+
+        <requestFocus />
+    </EditText>
 
 </LinearLayout>
