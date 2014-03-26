@@ -3,6 +3,19 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical" >
-    
+
+    <TextView
+        android:id="@+id/groupnametext"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:textSize = "30dp"
+        android:text="TextView" />
+
+    <ImageView
+        android:id="@+id/chatlogimage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@drawable/chatlog" />
 
 </LinearLayout>
