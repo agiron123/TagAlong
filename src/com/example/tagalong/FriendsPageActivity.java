@@ -16,8 +16,7 @@ public class FriendsPageActivity extends Activity
     Button button;
     Button button2;
     
-    //Button myButton;
-	
+    
     //onCreate is where the page is first created. Initialize things like buttons here.
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -46,32 +45,29 @@ public class FriendsPageActivity extends Activity
     
     public void addButtonListener()
     {
-        button.setOnTouchListener(new View.OnTouchListener() {
+        button.setOnClickListener(new View.OnClickListener() {
             
             @Override
-            public boolean onTouch(View v, MotionEvent event) {
+            public void onClick(View v) {
                 // TODO Auto-generated method stub
                 
                 Log.d("FriendsPageActivity", "Touched the remove friend button");
                 Toast.makeText(getApplicationContext(), "Removed friend!", Toast.LENGTH_LONG).show();
                 
-                return true;
             }
-            
         });
         
-        button2.setOnTouchListener(new View.OnTouchListener() {
+        button2.setOnClickListener(new View.OnClickListener() {
             
             @Override
-            public boolean onTouch(View v, MotionEvent event) {
+            public void onClick(View v) {
                 // TODO Auto-generated method stub
                 
                 Log.d("FriendsPageActivity", "Touched the add to group button");
                 Toast.makeText(getApplicationContext(), "Added friend to group!", Toast.LENGTH_LONG).show();
                 
-                return true;
+                
             }
-            
         });
         
     }
