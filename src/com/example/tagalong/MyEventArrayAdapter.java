@@ -28,9 +28,9 @@ public class MyEventArrayAdapter extends ArrayAdapter<Event> {
 	    titleTextView.setText(values[position].getTitle());
 
 	    //set the image for the event
-	    ImageView imageView = (ImageView) rowView.findViewById(R.id.placeholderImage4);
-	    imageView.setImageBitmap(values[position].getPicture());
-	    
+	    //Setting the image to the placeholder for now.
+	    ImageView imageView = (ImageView) rowView.findViewById(R.drawable.placeholder);
+
 	    //set the start date time text for the event
 	    TextView startDateTextView = (TextView) rowView.findViewById(R.id.eventDateTimeTextView);
 	    startDateTextView.setText(values[position].getStartDateTime());
