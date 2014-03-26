@@ -23,9 +23,7 @@ public class FriendsPageActivity extends Activity
         super.onCreate(savedInstanceState);
         setContentView(R.layout.friends_page_layout);
         
-        button =(Button) findViewById(R.id.button);
-        addButtonListener();
-        
+        button =(Button) findViewById(R.id.button);        
         button2 =(Button) findViewById(R.id.button2);
         addButtonListener();
         

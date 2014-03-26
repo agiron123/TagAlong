@@ -53,12 +53,6 @@
 				android:layout_height="match_parent"
 				android:id="@android:id/list">
 			</ListView>
-
-            <include layout="@layout/event_carousel_item"/>
-            <include layout="@layout/event_carousel_item"/>
-			<include layout="@layout/event_carousel_item"/>
-			<include layout="@layout/event_carousel_item"/>
-			<include layout="@layout/event_carousel_item"/>
 			
         </LinearLayout>
     </HorizontalScrollView>

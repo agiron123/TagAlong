@@ -17,8 +17,9 @@ public class GroupsPageActivity extends Activity
 	        setContentView(R.layout.groups_page_layout);
 	        
 	        Intent intent = getIntent();
-			groupName = intent.getExtras().getString("groupName");
-			
+			//groupName = intent.getExtras().getString("groupName");
+			groupName = "tests";
+	        
 			TextView textView = (TextView) findViewById(R.id.groupnametext);
 			textView.setText(groupName);
 	        

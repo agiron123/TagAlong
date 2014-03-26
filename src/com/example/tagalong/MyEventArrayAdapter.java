@@ -1,6 +1,7 @@
 package com.example.tagalong;
 
 import android.content.Context;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -13,7 +14,7 @@ public class MyEventArrayAdapter extends ArrayAdapter<Event> {
 	private final Event[] values;
 
 	public MyEventArrayAdapter(Context context, Event[] values) {
-	    super(context, R.layout.event_carousel_item, values);
+	    super(context, R.layout.event_carousel_item, R.id.eventNameTextView,values);
 	    this.context = context;
 	    this.values = values;
 	  }
@@ -34,6 +35,8 @@ public class MyEventArrayAdapter extends ArrayAdapter<Event> {
 	    //set the start date time text for the event
 	    TextView startDateTextView = (TextView) rowView.findViewById(R.id.eventDateTimeTextView);
 	    startDateTextView.setText(values[position].getStartDateTime());
+	    
+	    Log.d("EventListAdapter Length:", ""+values.length);
 
 	    return rowView;
 	  }

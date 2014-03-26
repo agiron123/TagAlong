@@ -13,6 +13,7 @@ import android.view.View;
 import android.view.View.OnTouchListener;
 import android.widget.ArrayAdapter;
 import android.widget.ImageButton;
+import android.widget.ListView;
 import android.widget.Toast;
 
 public class MainActivity extends ListActivity {
@@ -67,5 +68,12 @@ public class MainActivity extends ListActivity {
     	
     }
     
+    @Override
+    public void onListItemClick(ListView l, View v, int position, long id) {
+      // do something with the data
+      Toast.makeText(getApplicationContext(), "ClickedEvent", Toast.LENGTH_LONG).show();
+      Intent i = new Intent(getApplicationContext(), FriendsPageActivity.class);
+      startActivity(i);
+    }
     
 }

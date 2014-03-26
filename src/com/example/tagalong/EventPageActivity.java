@@ -22,8 +22,9 @@ public class EventPageActivity extends Activity
 	        setContentView(R.layout.event_page_layout);
 	        
 	        Intent intent = getIntent();
-			eventName = intent.getExtras().getString("eventTitle");
-			
+			//eventName = intent.getExtras().getString("eventTitle");
+			eventName = "Testing!";
+	        
 			Button addWatchListButton = (Button) findViewById(R.id.addwatchlist);
 	        Button suggestGroupButton = (Button) findViewById(R.id.suggestgroup);
 	        ImageButton map_button =(ImageButton) findViewById(R.id.mapbutton);
