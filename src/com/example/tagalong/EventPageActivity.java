@@ -1,22 +1,66 @@
 package com.example.tagalong;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Menu;
+import android.view.MotionEvent;
+import android.view.View;
+import android.view.View.OnTouchListener;
+import android.widget.Button;
+import android.widget.ImageButton;
+import android.widget.Toast;
 
 public class EventPageActivity extends Activity
 {
 
-	  //Button myButton;
-	
-	   //onCreate is where the page is first created. Initialize things like buttons here.
+	    String eventName;
 	   @Override
 	    protected void onCreate(Bundle savedInstanceState) {
 	        super.onCreate(savedInstanceState);
 	        setContentView(R.layout.event_page_layout);
 	        
-	        //Example of how you initialize a button. Remember to add onClick listener later.
-	        //myButton =(Button) findViewById(R.id.button1); 
+	        Intent intent = getIntent();
+			eventName = intent.getExtras().getString("eventTitle");
+			
+			Button addWatchListButton = (Button) findViewById(R.id.addwatchlist);
+	        Button suggestGroupButton = (Button) findViewById(R.id.suggestgroup);
+	        ImageButton map_button =(ImageButton) findViewById(R.id.mapbutton);
+	        
+	        map_button.setOnTouchListener(new OnTouchListener() {
+
+				@Override
+				public boolean onTouch(View v, MotionEvent event) {
+					// TODO Auto-generated method stub
+					//TODO Make this transsfer to the map view.
+					Log.d("EventPageActivity", "Touched the map button");
+					Toast.makeText(getApplicationContext(), "Pressed Map Button!", Toast.LENGTH_LONG).show();
+					Intent i = new Intent(EventPageActivity.this, MapsPageActivity.class);
+					startActivity(i);
+					return true;
+				}
+				
+	 
+			});
+	        
+     
+	        addWatchListButton.setOnClickListener(new View.OnClickListener() {
+	        	@Override
+				public void onClick(View v) {
+	        		
+	        		Toast.makeText(EventPageActivity.this, "Added to Watch List!", Toast.LENGTH_LONG).show();
+				}
+			});
+	        
+	        suggestGroupButton.setOnClickListener(new View.OnClickListener() {
+	        	@Override
+				public void onClick(View v) {
+	        		
+	        		Toast.makeText(EventPageActivity.this, "Suggested to Group!", Toast.LENGTH_LONG).show();
+				}
+			});
+			
 	    }
 
 
@@ -27,3 +71,4 @@ public class EventPageActivity extends Activity
 	        return true;
 	    }
 }
+
