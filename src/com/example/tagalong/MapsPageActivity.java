@@ -10,7 +10,15 @@ import android.location.Location;
 import android.location.LocationManager;
 import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
+import android.util.Log;
 import android.view.Menu;
+import android.view.MotionEvent;
+import android.view.View;
+import android.view.View.OnTouchListener;
+import android.widget.Button;
+import android.widget.ImageButton;
+import android.widget.Toast;
+
 import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.GooglePlayServicesClient;
 import com.google.android.gms.location.LocationClient;
@@ -59,6 +67,23 @@ public class MapsPageActivity extends FragmentActivity implements  LocationListe
 					i.putExtra("eventTitle", marker.getTitle());       			
 					startActivity(i);				
 				}
+			});
+	        
+	        ImageButton map_button =(ImageButton) findViewById(R.id.imageButton1);
+	        map_button.setOnTouchListener(new OnTouchListener() {
+
+				@Override
+				public boolean onTouch(View v, MotionEvent event) {
+					// TODO Auto-generated method stub
+					//TODO Make this transsfer to the map view.
+					Log.d("MapsPageActivity", "Touched the map button");
+					Toast.makeText(getApplicationContext(), "Pressed Map Button!", Toast.LENGTH_LONG).show();
+					
+					Intent i = new Intent(getApplicationContext(), MainActivity.class);
+					startActivity(i);
+					return true;
+				}
+	 
 			});
 	    }
 	   	

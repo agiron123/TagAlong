@@ -50,7 +50,7 @@ public class EventPageActivity extends Activity
 	        	@Override
 				public void onClick(View v) {
 	        		
-	        		Toast.makeText(EventPageActivity.this, "Added to Watch List!", Toast.LENGTH_LONG).show();
+	        		Toast.makeText(EventPageActivity.this, "Added to Watch List!", Toast.LENGTH_SHORT).show();
 				}
 			});
 	        
@@ -58,7 +58,7 @@ public class EventPageActivity extends Activity
 	        	@Override
 				public void onClick(View v) {
 	        		
-	        		Toast.makeText(EventPageActivity.this, "Suggested to Group!", Toast.LENGTH_LONG).show();
+	        		Toast.makeText(EventPageActivity.this, "Suggested to Group!", Toast.LENGTH_SHORT).show();
 				}
 			});
 			
